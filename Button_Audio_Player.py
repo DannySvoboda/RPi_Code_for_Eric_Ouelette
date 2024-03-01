@@ -1,3 +1,8 @@
+"""Code Written by Danny Svoboda on March 1st 2021. 
+Intended to be used in a Google AIY Voice Kit Raspberry Pi,
+for Eric Ouelette in a robotics project. 
+Code is intended to wait for button press, then play audio file."""
+
 #import modules
 import aiy.voicehat
 import aiy.audio
