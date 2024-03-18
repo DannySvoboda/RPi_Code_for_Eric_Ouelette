@@ -5,17 +5,19 @@ Code is intended to wait for button press, then play audio file."""
 
 #import modules
 from aiy.board import Board,Led
-import aiy.voice.audio
+import pygame
 
 def main():
 #wait for button press
+  pygame.mixer.init()
+  pygame.mixer.music.load("music_files/MP3s(For_Storage)/Cyborg Ninja.mp3")
   while True:
     with Board() as board:
       print("Press the button for music!")
       board.button.wait_for_press()
       board.led.state = Led.ON
       print("Button pressed, playing music!")
-      aiy.audio.play_wav("music_files/Cyborg Ninja.wav")
+      pygame.mixer.music.play()       
       print("You played music!")
   
 if __name__ == "__main__":
